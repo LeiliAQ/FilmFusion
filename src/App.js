@@ -1,5 +1,6 @@
 import './components/Header'
 import Header from './components/Header';
+import Footer from './components/Footer.jsx'
 import './styles.css'
 
 function App() {
@@ -9,9 +10,7 @@ function App() {
         <Header/>
       </div>
 
-      <footer className='footer'>
-
-      </footer>
+      <Footer/>
     </div>
   );
 }
