@@ -20,11 +20,25 @@ export default function MoviesGrid() {
     return genre==="All Genres" ||
     movie.genre.toLowerCase()===genre.toLowerCase()
   }
+  const matchRating=(movie)=>{
+    switch(rating){
+      case "All":
+        return true
+      case "Good":
+        return movie.rating>=8
+      case "OK":
+        return movie.rating<8 && movie.rating>=5
+      case "Bad":
+          return movie.rating<5
+      default:
+        return false
+    }
+  }
   const matchSearchTerm = (movie) => {
     return movie.title.toLowerCase().includes(searchTerm.toLowerCase());
   };
   const filteredMovies = movies.filter(
-    (movie) => matchGenre(movie) && matchSearchTerm(movie)
+    (movie) => matchGenre(movie) && matchRating(movie) && matchSearchTerm(movie)
   );
   const genreHandler = (event) => {
     setGenre(event.target.value);
