@@ -44,6 +44,7 @@ export default function MoviesGrid({movies,watchlist,toggleWatchlist}) {
   };
   return (
     <div>
+      <div className="search-input-container">
       <input
         type="text"
         className="search-input"
@@ -51,6 +52,14 @@ export default function MoviesGrid({movies,watchlist,toggleWatchlist}) {
         value={searchTerm}
         onChange={doSearch}
       />
+      </div>
+      {/* <input
+        type="text"
+        className="search-input"
+        placeholder="Search Movies..."
+        value={searchTerm}
+        onChange={doSearch}
+      /> */}
       <div className="filter-bar">
         <div className="filter-slot">
           <label htmlFor="genre">Genre</label>

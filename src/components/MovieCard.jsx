@@ -35,7 +35,6 @@ export default function MovieCard({ movie, isWatchlisted, toggleWatchlist }) {
             type="checkbox"
             checked={isWatchlisted}
             onChange={() => {
-              console.log("Checkbox clicked");
               toggleWatchlist(movie.id);
             }}
           />
