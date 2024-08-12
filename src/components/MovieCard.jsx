@@ -23,8 +23,12 @@ export default function MovieCard({ movie,isWatchlisted,toggleWatchlist }) {
       />
       <div className="movie-card-info">
         <h3 className="movie-card-info">{movie.title}</h3>
-        <p className="movie-card-genre">{movie.genre}</p>
-        <p className={`movie-card-rating ${getRatingClass(movie.rating)}`}>{movie.rating}</p>
+        <div>
+          <span className="movie-card-genre">{movie.genre}</span>
+          <span className={`movie-card-rating ${getRatingClass(movie.rating)}`}>{movie.rating}</span>
+        </div>
+        {/* <p className="movie-card-genre">{movie.genre}</p>
+        <p className={`movie-card-rating ${getRatingClass(movie.rating)}`}>{movie.rating}</p> */}
       </div>
     </div>
   );
