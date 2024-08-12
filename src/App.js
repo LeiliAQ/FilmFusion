@@ -16,7 +16,7 @@ function App() {
   }, []); //componentDidMount
   const toggleWatchlist=(movieID)=>{
     setWatchlist(prev=>prev.includes(movieID)
-    ? prev.filter(id=>id!==movieID)
+    ? prev.filter(id=>id !== movieID)
     : [...prev,movieID])
   }
   return (
