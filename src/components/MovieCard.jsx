@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function MovieCard({ movie }) {
+export default function MovieCard({ movie,isWatchlisted,toggleWatchlist }) {
     const getRatingClass=(rating)=>{
         if(rating>=8){
             return 'rating-good'
